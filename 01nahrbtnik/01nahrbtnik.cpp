@@ -9,11 +9,11 @@ using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	cout << "Vnesi volumen: ";
+	cout << "Insert volumen: ";
 	int V;
 	cin >> V;
 
-	cout << endl << "Koliko bo predmetov? ";
+	cout << endl << "Number of elements? ";
 	int n;
 	cin >> n;
 
@@ -22,9 +22,9 @@ int _tmain(int argc, _TCHAR* argv[])
 		pol [i]=new double [n];
 
 	for (int i=0; i<n; i++){
-		cout << "vnesi volumen " << i+1 << "-tega predmeta: ";
+		cout << "volumen of " << i+1 << "-th element: ";
 		cin >> pol [0][i];
-		cout << "vnesi ceno " << i+1 << "-tega predmeta: ";
+		cout << "price of " << i+1 << "-th element: ";
 		cin >> pol [1][i];
 		pol [2][i]=(pol[1][i]/pol[0][i]);
 	}
@@ -45,7 +45,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	for (int i=0; i<n; i++)
 		skup+=(res[i]*pol[1][i]);
 
-	cout << "elementi si sledijo kot:" << endl;
+	cout << "Elements in order:" << endl;
 	for (int j=0; j<3; j++){
 		for (int i=0; i<n; i++){
 			cout << pol [j][i] << " ";
@@ -55,12 +55,12 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
 
-	cout << "vstavimo elemente: " << endl;
+	cout << "Insert Elements: " << endl;
 		for (int i=0; i<n; i++)
 			cout << res [i] << " ";
 		cout << endl;
 
-	cout << "skupna vrednost v nahrbtniku je: " <<  skup << endl;;
+	cout << "Sum: " <<  skup << endl;;
 
 
 
